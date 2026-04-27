@@ -167,15 +167,15 @@ const OptimizedMapMods = () => {
 
         <div className="break"/>
 
-        <label className="modifier-search-label" htmlFor="qcurrency">品质（通货）</label>
+        <label className="modifier-search-label" htmlFor="qcurrency">更多通货</label>
         <input type="search" className="modifier-quantity-box" id="qcurrency" name="search-mod" value={quality.currency}
                onChange={v => setQuality({...quality, currency: v.target.value})}/>
 
-        <label className="modifier-search-label" htmlFor="qdiv">品质（占卜）</label>
+        <label className="modifier-search-label" htmlFor="qdiv">更多地图</label>
         <input type="search" className="modifier-quantity-box" id="qdiv" name="search-mod" value={quality.divination}
                onChange={v => setQuality({...quality, divination: v.target.value})}/>
 
-        <label className="modifier-search-label" htmlFor="qscarab">品质（圣甲虫）</label>
+        <label className="modifier-search-label" htmlFor="qscarab">更多圣甲虫</label>
         <input type="search" className="modifier-quantity-box" id="qscarab" name="search-mod" value={quality.scarab}
                onChange={v => setQuality({...quality, scarab: v.target.value})}/>
 

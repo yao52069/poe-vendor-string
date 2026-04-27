@@ -28,7 +28,7 @@ export const RepoeLanguage = {
   RUSSIAN: {urlKey: "Russian", short: "ru", name: "Russian", flag: "🇷🇺"},
   SPANISH: {urlKey: "Spanish", short: "es", name: "Spanish", flag: "🇪🇸"},
   THAI: {urlKey: "Thai", short: "th", name: "Thai", flag: "🇹🇭"},
-  CHINESE: {urlKey: "Traditional%20Chinese", short: "zh", name: "Chinese", flag: "🇨🇳"},
+  CHINESE: {urlKey: "Traditional%20Chinese", short: "zh", name: "简体中文", flag: "🇨🇳"},
 } as const;
 
 export const LanguageFiles: {

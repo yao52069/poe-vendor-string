@@ -42,42 +42,42 @@ const PageLinks = () => {
   const currentPage = location.pathname;
 
   return (<div className="page-link-wrapper">
-    <div className="page-link-header">Path of Regex</div>
+    <div className="page-link-header">流亡正则</div>
     <div className="page-links">
       <p className="poe2-link">
         <a className="source-link" href="https://poe2.re" rel="noreferrer">
-          Path of Exile 2 Regex
+          流亡编年史2 正则
         </a>
       </p>
-      <PageLink text="Vendor" icon={vendorIcon} route={"/"} currentPage={currentPage} />
-      <PageLink text="Map mods" icon={mapIcon} route={"/maps"} currentPage={currentPage} />
-      <PageLink text="Items" icon={alterationIcon} route={"/items"} currentPage={currentPage} />
-      <PageLink text="Map names" icon={mapNameIcon} route={"/mapnames"} currentPage={currentPage} />
-      <PageLink text="Expedition" icon={expeditionIcon} route={"/expedition"} currentPage={currentPage} />
-      <PageLink text="Heist" icon={heistIcon} route={"/heist"} currentPage={currentPage} />
-      <PageLink text="Flasks" icon={flaskIcon} route={"/flasks"} currentPage={currentPage} />
-      <PageLink text="Bestiary" icon={beastIcon} route={"/beast"} currentPage={currentPage} />
-      <PageLink text="Tattoo" icon={tattooIcon} route={"/tattoo"} currentPage={currentPage} />
-      <PageLink text="Runegraft" icon={runegraftIcon} route={"/runegraft"} currentPage={currentPage} />
-      <PageLink text="Scarab" icon={scarabIcon} route={"/scarab"} currentPage={currentPage} />
-      <PageLink text="Jewel" icon={jewelIcon} route={"/jewel"} currentPage={currentPage} />
+      <PageLink text="商人" icon={vendorIcon} route={"/"} currentPage={currentPage} />
+      <PageLink text="地图词缀" icon={mapIcon} route={"/maps"} currentPage={currentPage} />
+      <PageLink text="物品" icon={alterationIcon} route={"/items"} currentPage={currentPage} />
+      <PageLink text="地图名称" icon={mapNameIcon} route={"/mapnames"} currentPage={currentPage} />
+      <PageLink text="探险队" icon={expeditionIcon} route={"/expedition"} currentPage={currentPage} />
+      <PageLink text="盗贼港" icon={heistIcon} route={"/heist"} currentPage={currentPage} />
+      <PageLink text="药剂" icon={flaskIcon} route={"/flasks"} currentPage={currentPage} />
+      <PageLink text="异兽图鉴" icon={beastIcon} route={"/beast"} currentPage={currentPage} />
+      <PageLink text="纹身" icon={tattooIcon} route={"/tattoo"} currentPage={currentPage} />
+      <PageLink text="符文嫁接" icon={runegraftIcon} route={"/runegraft"} currentPage={currentPage} />
+      <PageLink text="圣甲虫" icon={scarabIcon} route={"/scarab"} currentPage={currentPage} />
+      <PageLink text="珠宝" icon={jewelIcon} route={"/jewel"} currentPage={currentPage} />
       <p></p>
       <p className="support-link">
         <img src={githubIcon} alt="issue tracker" className="support-icon" />
         <a className="source-link" href="https://github.com/veiset/poe-vendor-string/issues"
           rel="noreferrer">
-          Report issue
+          报告问题
         </a>
       </p>
       <p className="support-link">
         <img src={coffeeIcon} alt="buy me a coffee" className="support-icon" />
         <a className="source-link" href="https://www.buymeacoffee.com/veiset" rel="noreferrer">
-          Buy me a coffee</a>
+          打赏作者</a>
       </p>
       <p className="support-link">
         <img src={plausibleIcon} alt="website stats" className="support-icon" />
         <a className="source-link" href="https://p.vz.is/poe.re" rel="noreferrer">
-          Website stats</a>
+          网站统计</a>
       </p>
     </div>
   </div>)

@@ -96,7 +96,7 @@ const OptimizedMapMods = () => {
 
   return (
     <>
-      <HeaderWithLanguage text={"Optimized Map Modifiers"}/>
+      <HeaderWithLanguage text={"优化地图词缀"}/>
       <RegexResultBox
         result={result}
         warning={undefined}
@@ -133,133 +133,131 @@ const OptimizedMapMods = () => {
         </div>
       )}
       <div className="break"/>
-      <p className="info-text">New generation method. Please report any bugs, especially in the newly added
-        languages. <br/> English now has nightmare mods, will keep updating.</p>
-      <p className="trade-info-text">* Fields marked with an asterisk are compatible with the Trade search.</p>
+      <p className="info-text">新版生成方式。如有 bug 请反馈，尤其是新添加的语言。<br/> 英文版已包含梦魇词缀，持续更新中。</p>
+      <p className="trade-info-text">* 带星号字段与交易网站搜索兼容。</p>
       <div className="full-size generic-top-element">
-        <label className="modifier-search-label" htmlFor="quantity">Quantity of at least<span className="trade-compatible">*</span></label>
+        <label className="modifier-search-label" htmlFor="quantity">最低数量<span className="trade-compatible">*</span></label>
         <input type="search" className="modifier-quantity-box" id="quantity" name="search-mod" value={quantity}
                onChange={v => setQuantity(v.target.value)}/>
 
-        <label className="modifier-search-label" htmlFor="pack-size">Pack Size of at least<span className="trade-compatible">*</span></label>
+        <label className="modifier-search-label" htmlFor="pack-size">最低怪物数量<span className="trade-compatible">*</span></label>
         <input type="search" className="modifier-quantity-box" id="pack-size" name="search-mod" value={packsize}
                onChange={v => setPacksize(v.target.value)}/>
 
-        <label className="modifier-search-label" htmlFor="mapdrop">More maps of at least</label>
+        <label className="modifier-search-label" htmlFor="mapdrop">更多地图 最低</label>
         <input type="search" className="modifier-quantity-box" id="mapdrop" name="search-mod" value={mapDropChance}
                onChange={v => setMapDropChance(v.target.value)}/>
 
-        <label className="modifier-search-label" htmlFor="itemRarity">Item rarity of at least<span className="trade-compatible">*</span></label>
+        <label className="modifier-search-label" htmlFor="itemRarity">最低物品稀有度<span className="trade-compatible">*</span></label>
         <input type="search" className="modifier-quantity-box" id="itemRarity" name="search-mod" value={itemRarity}
                onChange={v => setItemRarity(v.target.value)}/>
         <div className="break"/>
 
-        <label className="modifier-search-label" htmlFor="qregular">Quality of</label>
+        <label className="modifier-search-label" htmlFor="qregular">品质</label>
         <input type="search" className="modifier-quantity-box" id="qregular" name="search-mod" value={quality.regular}
                onChange={v => setQuality({...quality, regular: v.target.value})}/>
 
-        <label className="modifier-search-label" htmlFor="qpacksize">Quality (pack size)</label>
+        <label className="modifier-search-label" htmlFor="qpacksize">品质（怪物数量）</label>
         <input type="search" className="modifier-quantity-box" id="qpacksize" name="search-mod" value={quality.packSize}
                onChange={v => setQuality({...quality, packSize: v.target.value})}/>
 
-        <label className="modifier-search-label" htmlFor="qrarity">Quality (rarity)</label>
+        <label className="modifier-search-label" htmlFor="qrarity">品质（稀有度）</label>
         <input type="search" className="modifier-quantity-box" id="qrarity" name="search-mod" value={quality.rarity}
                onChange={v => setQuality({...quality, rarity: v.target.value})}/>
 
         <div className="break"/>
 
-        <label className="modifier-search-label" htmlFor="qcurrency">Quality (currency)</label>
+        <label className="modifier-search-label" htmlFor="qcurrency">品质（通货）</label>
         <input type="search" className="modifier-quantity-box" id="qcurrency" name="search-mod" value={quality.currency}
                onChange={v => setQuality({...quality, currency: v.target.value})}/>
 
-        <label className="modifier-search-label" htmlFor="qdiv">Quality (divination)</label>
+        <label className="modifier-search-label" htmlFor="qdiv">品质（占卜）</label>
         <input type="search" className="modifier-quantity-box" id="qdiv" name="search-mod" value={quality.divination}
                onChange={v => setQuality({...quality, divination: v.target.value})}/>
 
-        <label className="modifier-search-label" htmlFor="qscarab">Quality (scarab)</label>
+        <label className="modifier-search-label" htmlFor="qscarab">品质（圣甲虫）</label>
         <input type="search" className="modifier-quantity-box" id="qscarab" name="search-mod" value={quality.scarab}
                onChange={v => setQuality({...quality, scarab: v.target.value})}/>
 
         <div className="break"/>
 
-        <Checkbox label="Match any of the quality types (disable this to match ALL selected quality)"
+        <Checkbox label="匹配任意品质类型（禁用以匹配所有选中品质）"
                   value={anyQuality}
                   onChange={setAnyQuality}/>
 
-        <Checkbox label="Optimize Quantity value (round down to nearest 10, saves a lot of query space)"
+        <Checkbox label="优化数量值（向下取整至最近10，大幅节省查询空间）"
                   value={optimizeQuant}
                   onChange={setOptimizeQuant}/>
-        <Checkbox label="Optimize Pack Size value" value={optimizePacksize}
+        <Checkbox label="优化怪物数量值" value={optimizePacksize}
                   onChange={setOptimizePacksize}/>
-        <Checkbox label="Optimize Map Quality value" value={optimizeQuality}
+        <Checkbox label="优化地图品质值" value={optimizeQuality}
                   onChange={setOptimizeQuality}/>
 
         <div className="rarity-select">
-          <Checkbox label="Normal Maps" value={rarity.normal}
+          <Checkbox label="普通地图" value={rarity.normal}
                     onChange={(e) => setRarity({...rarity, normal: !!e})}/>
-          <Checkbox label="Magic Maps" value={rarity.magic}
+          <Checkbox label="魔法地图" value={rarity.magic}
                     onChange={(e) => setRarity({...rarity, magic: !!e})}/>
-          <Checkbox label="Rare Maps" value={rarity.rare}
+          <Checkbox label="稀有地图" value={rarity.rare}
                     onChange={(e) => setRarity({...rarity, rare: !!e})}/>
           <div className="radio-button-modgroup">
             <input type="radio" className="radio-button-map" id="maps-include" name="map-include"
                    checked={rarity.include}
                    onChange={v => setRarity({...rarity, include: true})}/>
-            <label htmlFor="maps-include" className="radio-button-map radio-first-ele">Include</label>
+            <label htmlFor="maps-include" className="radio-button-map radio-first-ele">包含</label>
             <input type="radio" id="maps-exclude" name="map-include"
                    checked={!rarity.include}
                    onChange={v => setRarity({...rarity, include: false})}/>
-            <label htmlFor="maps-exclude" className="radio-button-map">Exclude</label>
+            <label htmlFor="maps-exclude" className="radio-button-map">排除</label>
           </div>
         </div>
         <div className="rarity-select">
-          <Checkbox label="Corrupted Map" value={corrupted.enabled}
+          <Checkbox label="腐化地图" value={corrupted.enabled}
                     onChange={(e) => setCorrupted({...corrupted, enabled: !corrupted.enabled})}/>
           <div className="radio-button-corrupted">
             <input type="radio" className="radio-button-map" id="corrupted-include" name="corrupted-include"
                    checked={corrupted.include}
                    onChange={v => setCorrupted({...corrupted, include: true})}/>
-            <label htmlFor="corrupted-include" className="radio-button-map radio-first-ele">Include</label>
+            <label htmlFor="corrupted-include" className="radio-button-map radio-first-ele">包含</label>
             <input type="radio" id="corrupted-exclude" name="corrupted-exclude"
                    checked={!corrupted.include}
                    onChange={v => setCorrupted({...corrupted, include: false})}/>
-            <label htmlFor="corrupted-exclude" className="radio-button-map">Exclude</label>
+            <label htmlFor="corrupted-exclude" className="radio-button-map">排除</label>
           </div>
         </div>
         <div className="rarity-select">
-          <Checkbox label="Unidentified Map" value={unidentified.enabled}
+          <Checkbox label="未鉴定地图" value={unidentified.enabled}
                     onChange={(e) => setUnidentified({...unidentified, enabled: !unidentified.enabled})}/>
           <div className="radio-button-unidentified">
             <input type="radio" className="radio-button-map" id="unidentified-include" name="unidentified-include"
                    checked={unidentified.include}
                    onChange={v => setUnidentified({...unidentified, include: true})}/>
-            <label htmlFor="unidentified-include" className="radio-button-map radio-first-ele">Include</label>
+            <label htmlFor="unidentified-include" className="radio-button-map radio-first-ele">包含</label>
             <input type="radio" id="unidentified-exclude" name="unidentified-exclude"
                    checked={!unidentified.include}
                    onChange={v => setUnidentified({...unidentified, include: false})}/>
-            <label htmlFor="unidentified-exclude" className="radio-button-map">Exclude</label>
+            <label htmlFor="unidentified-exclude" className="radio-button-map">排除</label>
           </div>
         </div>
         <div className="rarity-select">
-          <Checkbox label="Show nightmare modifiers" value={displayNightmareMods}
+          <Checkbox label="显示梦魇词缀" value={displayNightmareMods}
                     onChange={setDisplayNightmareMods}/>
         </div>
         <div className="break spacer-top"/>
       </div>
       <div className="eq-col-2 box-small-padding">
-        <div className="column-header map-column-text">I don't want any of these mods</div>
+        <div className="column-header map-column-text">不想要的词缀</div>
       </div>
       <div className="eq-col-2 box-small-padding">
-        <div className="column-header map-column-text">I want these mods</div>
+        <div className="column-header map-column-text">想要的词缀</div>
         <div className="radio-button-modgroup">
           <input type="radio" className="radio-button-map" id="mods-any" name="mods" value="any"
                  checked={!modGrouping}
                  onChange={v => setModGrouping(!v.target.checked)}/>
-          <label htmlFor="mods-any" className="radio-button-map radio-first-ele">I want <b>any</b> of the
-            modifiers</label>
+          <label htmlFor="mods-any" className="radio-button-map radio-first-ele">匹配<b>任意</b>词缀</label>
           <input type="radio" id="mods-all" name="mods" value="all" checked={modGrouping}
                  onChange={v => setModGrouping(v.target.checked)}/>
-          <label htmlFor="mods-all" className="radio-button-map">I want <b>all</b> of the modifiers</label>
+          <label htmlFor="mods-all" className="radio-button-map">匹配<b>所有</b>词缀</label>
         </div>
       </div>
       <div className="break"/>

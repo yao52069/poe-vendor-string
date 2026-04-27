@@ -10,7 +10,7 @@ export interface SelectableSearchProps {
 
 const SelectableSearch = (props: SelectableSearchProps) => {
   const {search, setSearch, placeholder, style} = props;
-  const placeholderText = placeholder ?? "Search for a modifier  (tip: paste regex here)";
+  const placeholderText = placeholder ?? "搜索词缀（提示：可粘贴正则表达式）";
   const className = "selectable-search-input " + (style ? style : "")
   return (
     <div className="selectable-search-layout">

@@ -57,16 +57,15 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
         <div className={finalResult === copied ? "rrb-result-text copied-good" : "rrb-result-text"}>
           {finalResult}
         </div>
-        {error && <div className="error">Error: {error}</div>}
+        {error && <div className="error">错误: {error}</div>}
         {warning && <div className="warning">{warning}</div>}
         {finalResult.length > maxLen &&
-            <div className="error">Error: {finalResult.length} / {maxLen} characters used - PoE client has a max limit
-                of {maxLen} characters
+            <div className="error">错误: 已使用 {finalResult.length} / {maxLen} 字符 - PoE 客户端最大限制 {maxLen} 字符
             </div>
         }
         {finalResult.length <= maxLen &&
             <div className="rrb-result-info">
-                length: {finalResult.length} / {maxLen}
+                长度: {finalResult.length} / {maxLen}
             </div>
         }
       </div>
@@ -75,12 +74,12 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
           setCopied(finalResult);
           navigator.clipboard.writeText(finalResult);
         }}>
-          Copy
+          复制
         </button>
         <button className="rrb-reset-button" onClick={() => {
           reset();
         }}>
-          Reset
+          重置
         </button>
         {onTradeSearch && (
           <button
@@ -88,24 +87,24 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
             onClick={onTradeSearch}
             disabled={tradeSearchLoading}
           >
-            {tradeSearchLoading ? "Loading..." : "Trade"}
+            {tradeSearchLoading ? "加载中..." : "交易"}
           </button>
         )}
         <button className="rrb-option-button" onClick={() => {
           setShowOptions(!showOptions)
         }}>
-          Options
+          选项
         </button>
         {bugButton && <button className="rrb-bug">
             <BugReport regex={result} />
         </button> }
       </div>
       {showOptions && <div className="rrb-options">
-          <Checkbox label={"Enable custom text"} value={enableCustomText} onChange={setEnableCustomText}/>
+          <Checkbox label={"启用自定义文本"} value={enableCustomText} onChange={setEnableCustomText}/>
           <div className="rrb-options-custom-text">
               <input type="text" value={customText} onChange={(e) => setCustomText(e.target.value)}/>
           </div>
-          <Checkbox label={"Auto copy result text"} value={autoCopy} onChange={setAutoCopy}/>
+          <Checkbox label={"自动复制结果"} value={autoCopy} onChange={setAutoCopy}/>
       </div>
       }
     </div>
@@ -123,7 +122,7 @@ export const AutoCopyCheckbox = (props: AutoCopyCheckboxProps) => {
     <label className="auto-copy">
       <input type="checkbox" className="checkbox-autocopy" checked={props.value}
              onChange={e => props.onChange(e.target.checked)}/>
-      <span className="auto-copy-text">Auto-copy</span>
+      <span className="auto-copy-text">自动复制</span>
     </label>
   )
 }

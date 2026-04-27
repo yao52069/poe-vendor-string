@@ -92,3 +92,96 @@
     color: #2d7a9c;
     font-size: 14px;
 }
+
+/* ======== wqonline 风格重排版 ======== */
+
+/* 卡片容器 */
+.map-stat-card {
+    background: #252c35;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 6px 8px;
+    width: calc(100% - 16px);
+    box-sizing: border-box;
+}
+
+/* 卡片标题栏 */
+.map-stat-card-title {
+    font-size: 11px;
+    color: #7a9ab5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* 2列网格 */
+.map-stat-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+}
+
+/* 3列网格 */
+.map-stat-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px 16px;
+}
+
+/* 每个 输入项（label + input 对） */
+.map-stat-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    height: 36px;
+}
+
+.map-stat-label {
+    font-size: 13px;
+    color: #b8c8d4;
+    white-space: nowrap;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.map-stat-input {
+    width: 58px;
+    padding: 4px 6px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.35) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 4px;
+    color: #fff !important;
+    font-family: monospace;
+    text-align: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.map-stat-input:focus {
+    outline: none;
+    border-color: rgba(100, 180, 220, 0.45) !important;
+    box-shadow: 0 0 0 2px rgba(100, 180, 220, 0.1);
+}
+
+/* 选项区水平排列 */
+.map-options-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 24px;
+    align-items: center;
+}
+
+/* 筛选行（稀有度/腐化/未鉴定） */
+.map-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 4px 0;
+}

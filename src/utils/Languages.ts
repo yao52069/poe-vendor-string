@@ -237,7 +237,7 @@ export const MapStaticStatRegex: Record<RepoeLanguageKey, {
     itemrarity: "稀有度.*",
     quality_regular: "数量）.*",
     quality_currency: "更多通货.*",
-    quality_divination: "更多地图.*",
+    quality_divination: "命运卡.*",
     quality_rarity: "有度）.*",
     quality_packsize: "群大小）.*",
     quality_scarab: "更多圣甲虫.*",

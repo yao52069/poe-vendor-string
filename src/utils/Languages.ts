@@ -245,7 +245,7 @@ export const MapStaticStatRegex: Record<RepoeLanguageKey, {
     rarity_normal: "普",
     rarity_magic: "魔",
     rarity_rare: "稀有$",
-    corrupted: "腐",
-    unidentified: "鉴",
+    corrupted: "腐化",
+    unidentified: "未鉴定",
   },
 };

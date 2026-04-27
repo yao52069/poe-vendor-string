@@ -233,7 +233,7 @@ export const MapStaticStatRegex: Record<RepoeLanguageKey, {
   CHINESE: {
     quantity: "品数量.*",
     packsize: "群大小.*",
-    mapdrop: "落的地图.*",
+    mapdrop: "更多地图.*",
     itemrarity: "稀有度.*",
     quality_regular: "数量）.*",
     quality_currency: "通货）.*",

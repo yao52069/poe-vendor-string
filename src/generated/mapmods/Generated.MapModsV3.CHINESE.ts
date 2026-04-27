@@ -6,7 +6,7 @@ export const regexMapModsCHINESE: Regex<MapModsTokenOption> = {
   tokens: [
     {id: -2064669900, regex: "忆境", rawText: "地图头目伴随着 1 个虚空忆境头目", generalizedText: "^地图头目伴随着 # 个虚空忆境头目$", options: {scary: 1001, nm: true}},
     {id: -2050206104, regex: "少生", rawText: "玩家有 (20-60)% 更少生命和能量护盾恢复率", generalizedText: "^玩家有 #% 更少生命和能量护盾恢复率$", options: {scary: 650, nm: false}},
-    {id: -2038489408, regex: "部最", rawText: "玩家 -20% 全部最大抗性", generalizedText: "^玩家 -#% 全部最大抗性$", options: {scary: 1001, nm: true}},
+    {id: -2038489408, regex: "抗性上限", rawText: "玩家的所有抗性上限 -20%", generalizedText: "^玩家的所有抗性上限 -#%$", options: {scary: 1001, nm: true}},
     {id: -1940135977, regex: "害格", rawText: "怪物 +50% 攻击伤害格挡率|区域中掉落的通货增加 47%", generalizedText: "^怪物 #% 攻击伤害格挡率$|^区域中掉落的通货增加 #%$", options: {scary: 1001, nm: true}},
     {id: -1934587276, regex: "塔", rawText: "区域内有许多奇塔弗的信徒", generalizedText: "^区域内有许多奇塔弗的信徒$", options: {scary: 4, nm: false}},
     {id: -1818595967, regex: "塑", rawText: "区域内的稀有怪物为塑界者之触", generalizedText: "^区域内的稀有怪物为塑界者之触$", options: {scary: 1001, nm: true}},
@@ -46,7 +46,7 @@ export const regexMapModsCHINESE: Regex<MapModsTokenOption> = {
     {id: -580302769, regex: "物伤害$", rawText: "增加 (14-40)% 怪物伤害", generalizedText: "^增加 #% 怪物伤害$", options: {scary: 370, nm: false}},
     {id: -539026720, regex: "对", rawText: "对怪物的诅咒有 (25-60)% 更少效果", generalizedText: "^对怪物的诅咒有 #% 更少效果$", options: {scary: 363, nm: false}},
     {id: -481946502, regex: "次", rawText: "怪物的技能附加 2 次连锁", generalizedText: "^怪物的技能附加 # 次连锁$", options: {scary: 380, nm: false}},
-    {id: -477049138, regex: "部最", rawText: "玩家 -(5-12)% 全部最大抗性", generalizedText: "^玩家 -#% 全部最大抗性$", options: {scary: 980, nm: false}},
+    {id: -477049138, regex: "抗性上限", rawText: "玩家的所有抗性上限 -(5-12)%", generalizedText: "^玩家的所有抗性上限 -#%$", options: {scary: 980, nm: false}},
     {id: -268547495, regex: "害率", rawText: "怪物 +(30-60)% 压制法术伤害率", generalizedText: "^怪物 #% 压制法术伤害率$", options: {scary: 290, nm: false}},
     {id: -258709095, regex: "物物", rawText: "怪物的物理伤害免疫", generalizedText: "^怪物的物理伤害免疫$", options: {scary: 1001, nm: true}},
     {id: -235013251, regex: "射物", rawText: "怪物反射 (10-15)% 物理伤害", generalizedText: "^怪物反射 #% 物理伤害$", options: {scary: 1001, nm: true}},
